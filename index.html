@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WRO Future Engineers Randomizer 2026</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="app-header">
+      <h1>WRO Future Engineers Randomizer</h1>
+    </header>
+
+    <main class="app-layout">
+      <aside class="side-panel controls-panel" aria-label="Round controls">
+        <div class="panel-label">Round</div>
+        <div class="mode-toggle" role="tablist" aria-label="Round type">
+          <button class="mode-btn active" data-mode="open" role="tab" aria-selected="true">Open</button>
+          <button class="mode-btn" data-mode="final" role="tab" aria-selected="false">Final</button>
+        </div>
+        <button id="randomizeBtn" class="primary-btn randomize-btn">Randomize</button>
+      </aside>
+
+      <section class="field-wrap" aria-label="Generated WRO field layout">
+        <div class="field-frame">
+          <img src="assets/playfield.png" alt="WRO Future Engineers playfield" class="playfield-image" draggable="false" />
+          <svg id="overlay" class="field-overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </section>
+
+      <aside class="side-panel timer-panel" aria-label="Timer">
+        <div class="panel-label">Timer</div>
+        <div id="timerDisplay" class="timer-display">
+          <span class="timer-main">00:00</span><span class="timer-centi">.00</span>
+        </div>
+        <button id="toggleTimerBtn" class="primary-btn timer-btn">Start</button>
+        <button id="resetTimerBtn" class="secondary-btn">Reset</button>
+      </aside>
+    </main>
+
+    <footer class="app-footer">
+      Copyright © 2026 <a href="https://hyperlinerobotics.com/" target="_blank" rel="noreferrer">HyperLine Robotics</a>
+    </footer>
+  </div>
+
+  <script src="js/randomizer.js"></script>
+</body>
+</html>
